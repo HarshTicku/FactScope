@@ -3,3 +3,8 @@ venv/
 
 # Ignore environment variables file
 .env
+
+# Ignore specific files
+factchecker.py
+factextrator+scrapper.py
+summarizer.py
