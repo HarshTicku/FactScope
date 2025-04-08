@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "FactScope: AI-Powered Content Analysis",
+  "version": "1.1.0",
+  "description": "Analyze online content for factual accuracy, bias, and source credibility in real-time",
+  "permissions": [
+    "activeTab", 
+    "scripting", 
+    "storage", 
+    "contextMenus"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Open FactScope extension"
+    },
+    "quick_summary": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Quick summarize selected text"
+    }
+  }
+}

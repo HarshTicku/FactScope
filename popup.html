@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FactScope</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Removed Chart.js script since we no longer use it -->
+</head>
+<body>
+  <div class="card">
+    <header class="popup-header">
+      <h1>FactScope</h1>
+    </header>
+    
+    <!-- Single input field with integrated datalist -->
+    <div class="input-container">
+      <input type="text" id="input-bar" placeholder="Text/URL" list="urlSuggestions" />
+      <datalist id="urlSuggestions"></datalist>
+    </div>
+    
+    <!-- Trust Meter (Thumbs Up/Down Slider) -->
+    <div class="trust-meter">
+      <div id="trust-score" class="trust-score">0%</div>
+      <div class="trust-bar">
+        <span id="thumb-down" class="thumb">👎</span>
+        <div class="bar-wrapper">
+          <div id="trust-fill" class="bar-fill"></div>
+        </div>
+        <span id="thumb-up" class="thumb">👍</span>
+      </div>
+    </div>
+    
+    <!-- Source Credibility Status -->
+    <div id="credibility-status" class="credibility">Checking source credibility...</div>
+    
+    <!-- Summary Dropdown -->
+    <details>
+      <summary>Summary</summary>
+      <p id="summary-text">Loading summary...</p>
+    </details>
+    
+    <!-- Consensus Summary Dropdown -->
+    <details>
+      <summary>Consensus Summary</summary>
+      <p id="consensus-summary">Loading consensus...</p>
+    </details>
+    
+    <!-- Related News Articles -->
+    <div class="related-news">
+      <h4>Related Articles</h4>
+      <ul id="related-articles"></ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

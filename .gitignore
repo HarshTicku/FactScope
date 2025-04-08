@@ -5,6 +5,5 @@ venv/
 .env
 
 # Ignore specific files
-factchecker.py
-factextrator+scrapper.py
-summarizer.py
+backend/ignored/
+backend/__pycache__/
